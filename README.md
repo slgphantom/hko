@@ -1,14 +1,10 @@
-#HKO
+# HKO
 A package to retrieve weather data from the Hong Kong Observatory.
 Data (private api endpoints) obtained through capturing the traffic of the HKO app and web, and extracting the apk file etc.
 <br>
 
-<br>
-
 ## Installating required packages
 `pip install -r requirements.txt`
-<br>
-
 <br>
 
 ## Usage
@@ -24,8 +20,6 @@ Every function (request) will return a `dict`, whereas `result` and `status` wil
                       'sunrise': '0607',
                       'sunset': '1836'},
         'status': 1}
-<br>
-
 <br>
 
 ## Functions List
@@ -47,8 +41,6 @@ Functions | Number of Arguments | Type of Argument | Arguments Supported | Defau
 `weather_warning()` | 1 | `str` | ['UC', 'EN'] | 'UC'
 <br>
 
-<br>
-
 ## Status Code
 Status | Meaning
 :---: | :---:
@@ -59,22 +51,15 @@ Status | Meaning
 4 | Requested Data Not Yet Available
 <br>
 
-<br>
-
 ## Coding Style
 - Following [PEP 8](https://www.python.org/dev/peps/pep-0008/)
 - Checked by the `pylint`
 <br>
 
-<br>
-
-
 ## TODO
 - unifying the time/date format (perhaps adding a `timestamp` field in returned `dict`)
 - `major_city_forecast()` --> accept `place` as an argument
 - support more functions 
-<br>
-
 <br>
 
 ## Contributions
