@@ -9,7 +9,7 @@ import requests
 from hko.distance_calculation import distance_calculation
 
 
-with open('hko/assets/rainfall_nowcast_mapping.json') as f:
+with open('assets/rainfall_nowcast_mapping.json') as f:
     MAPPING = json.load(f)
 
 
