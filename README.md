@@ -62,6 +62,7 @@ Status | Meaning
 - support more functions
 - add tests
 - catch requests errors
+- Clean functions with lang (exclude TypeError)
 <br>
 
 ## Contributions
