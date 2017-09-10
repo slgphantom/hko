@@ -21,7 +21,7 @@ def weather_warning(lang='UC'):
                 data = requests.get(BASE_URL + URL_UC)
             if lang == 'EN':
                 data = requests.get(BASE_URL + URL_EN)
-            data_2 = json.loads(data.text.replace('var weather_warning_summary = ', '')[:-2]+'}')
+            data_2 = json.loads(data.text.replace('var weather_warning_summary = ', '')[:-2] + '}')
             response['result'] = data_2
             response['status'] = 1
         except IndexError:
@@ -34,4 +34,3 @@ def weather_warning(lang='UC'):
         response['result'] = ''
         response['status'] = 0
     return response
-    

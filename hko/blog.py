@@ -22,4 +22,3 @@ def blog():
         response['result'] = ''
         response['status'] = 2
     return response
-    

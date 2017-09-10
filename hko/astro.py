@@ -29,4 +29,3 @@ def astro():
         response['result'] = ''
         response['status'] = 2
     return response
-    

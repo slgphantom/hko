@@ -43,4 +43,3 @@ def local_weather(lat, lng):
         response['result'] = ''
         response['status'] = 0
     return response
-    

@@ -37,4 +37,3 @@ def tide():
         response['result'] = ''
         response['status'] = 2
     return response
-    

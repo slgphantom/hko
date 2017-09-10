@@ -38,10 +38,10 @@ def rainfall_nowcast(lat, lng):
             data = requests.get(BASE_URL + url).content
             data2 = re.split('[@#]', data)
             temp = {}
-            temp['0-30'] = {'from_time':data2[0], 'to_time':data2[2], 'value':data2[1]}
-            temp['30-60'] = {'from_time':data2[2], 'to_time':data2[4], 'value':data2[3]}
-            temp['60-90'] = {'from_time':data2[4], 'to_time':data2[6], 'value':data2[5]}
-            temp['90-120'] = {'from_time':data2[6], 'to_time':data2[8], 'value':data2[7]}
+            temp['0-30'] = {'from_time': data2[0], 'to_time': data2[2], 'value': data2[1]}
+            temp['30-60'] = {'from_time': data2[2], 'to_time': data2[4], 'value': data2[3]}
+            temp['60-90'] = {'from_time': data2[4], 'to_time': data2[6], 'value': data2[5]}
+            temp['90-120'] = {'from_time': data2[6], 'to_time': data2[8], 'value': data2[7]}
             temp['description_en'] = data2[9]
             temp['description_tc'] = data2[10]
             temp['description_sc'] = data2[11]

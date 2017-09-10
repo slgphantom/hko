@@ -33,4 +33,3 @@ def south_china_coastal_waters(lang='UC'):
         response['result'] = ''
         response['status'] = 0
     return response
-    

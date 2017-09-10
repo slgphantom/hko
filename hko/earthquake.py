@@ -10,6 +10,7 @@ BASE_URL = 'http://pda.weather.gov.hk/'
 URL_UC = 'locspc/android_data/earthquake/eq_app_uc.xml'
 URL_EN = 'locspc/android_data/earthquake/eq_app_e.xml'
 
+
 def earthquake(lang='UC'):
 
     """A function to retrieve astro data from Hong Kong Observatory"""
