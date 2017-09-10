@@ -61,7 +61,6 @@ Status | Meaning
 - `major_city_forecast()` --> accept `place` as an argument
 - support more functions
 - add tests
-- clean functions without parameter (exclude TypeError)
 - catch requests errors
 <br>
 

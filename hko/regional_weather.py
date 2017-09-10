@@ -21,7 +21,4 @@ def regional_weather():
     except IndexError:
         response['result'] = ''
         response['status'] = 2
-    except TypeError:
-        response['result'] = ''
-        response['status'] = 0
     return response
