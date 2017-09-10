@@ -62,7 +62,8 @@ Status | Meaning
 - support more functions
 - add tests
 - catch requests errors
-- Clean functions with lang (exclude TypeError)
+- clean functions with lang (exclude TypeError)
+- catch requests error (perhaps raise_for_status)
 <br>
 
 ## Contributions
