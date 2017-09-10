@@ -59,7 +59,10 @@ Status | Meaning
 ## TODO
 - unifying the time/date format (perhaps adding a `timestamp` field in returned `dict`)
 - `major_city_forecast()` --> accept `place` as an argument
-- support more functions 
+- support more functions
+- add tests
+- clean functions without parameter (exclude TypeError)
+- catch requests errors
 <br>
 
 ## Contributions
