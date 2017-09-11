@@ -43,9 +43,6 @@ def uv_index(lang='UC'):
             else:
                 response['result'] = ''
                 response['status'] = 2
-        except TypeError:
-            response['result'] = ''
-            response['status'] = 0
     else:
         response['result'] = ''
         response['status'] = 0
