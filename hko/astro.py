@@ -28,4 +28,7 @@ def astro():
     except IndexError:
         response['result'] = ''
         response['status'] = 2
+    except requests.exceptions.RequestException:
+        response['result'] = ''
+        response['status'] = 5
     return response

@@ -36,6 +36,9 @@ def local_weather(lat, lng):
             except IndexError:
                 response['result'] = ''
                 response['status'] = 2
+            except requests.exceptions.RequestException:
+                response['result'] = ''
+                response['status'] = 5
         else:
             response['result'] = ''
             response['status'] = 3

@@ -29,7 +29,7 @@ class TestHKO(unittest.TestCase):
         for func in FUNCTIONS_WITH_LANG:
             self.assertEqual(func('XXX')['status'], 0)
             self.assertEqual(func(123.4)['status'], 0)
-            ok_status = [1, 2, 4] if func in FUNCTIONS_WITH_LANG_ST4 else [1, 2]
+            ok_status = [1, 2, 4, 5] if func in FUNCTIONS_WITH_LANG_ST4 else [1, 2, 5]
             self.assertIn(func()['status'], ok_status)
             self.assertIn(func('UC')['status'], ok_status)
             self.assertIn(func('EN')['status'], ok_status)
@@ -46,7 +46,7 @@ class TestHKO(unittest.TestCase):
             self.assertEqual(func(-90.1, 123.4)['status'], 0)
             self.assertEqual(func(45.6, 180.1)['status'], 0)
             self.assertEqual(func(45.6, -180.1)['status'], 0)
-            self.assertIn(func(*HONG_KONG_LAT_LNG)['status'], [1, 2])
+            self.assertIn(func(*HONG_KONG_LAT_LNG)['status'], [1, 2, 5])
             self.assertEqual(func(*MACAU_LAT_LNG)['status'], 3)
 
     def test_functions_without_args(self):
@@ -54,7 +54,7 @@ class TestHKO(unittest.TestCase):
         """A function to test functions without arguments"""
 
         for func in FUNCTIONS_WITHOUT_ARGS:
-            self.assertIn(func()['status'], [1, 2])
+            self.assertIn(func()['status'], [1, 2, 5])
 
 
 if __name__ == '__main__':
