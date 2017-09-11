@@ -11,8 +11,6 @@ from hko.distance_calculation import distance_calculation
 
 with open('assets/rainfall_nowcast_mapping.json') as f:
     MAPPING = json.load(f)
-
-
 BASE_URL = 'http://pda.weather.gov.hk/'
 
 

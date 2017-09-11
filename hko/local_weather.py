@@ -7,11 +7,8 @@ import requests
 
 from hko.distance_calculation import distance_calculation
 
-
 with open('assets/grid_location.json') as f:
     GRID = json.load(f)
-
-
 BASE_URL = 'http://pda.weather.gov.hk/'
 
 
