@@ -28,7 +28,7 @@ def rainfall_nowcast(lat, lng):
         newlist = sorted(temp_dict, key=itemgetter('dis'))
         if newlist[0]['dis'] > 10:
             response['result'] = ''
-            response['status'] = 0
+            response['status'] = 3
             return response
         lat_2 = newlist[0]['lat']
         lng_2 = newlist[0]['lng']
