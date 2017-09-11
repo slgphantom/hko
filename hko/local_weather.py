@@ -16,6 +16,7 @@ BASE_URL = 'http://pda.weather.gov.hk/'
 def local_weather(lat, lng):
 
     """A function to retrieve local weather data from Hong Kong Observatory"""
+
     response = {}
     if isinstance(lat, float) and isinstance(lng, float) and\
        -90 <= lat <= 90 and -180 <= lng <= 180:
