@@ -60,10 +60,8 @@ Status | Meaning
 - unifying the time/date format (perhaps adding a `timestamp` field in returned `dict`)
 - `major_city_forecast()` --> accept `place` as an argument
 - support more functions
-- add tests
-- catch requests errors
 - clean functions with lang (exclude TypeError)
-- catch requests error (perhaps raise_for_status)
+- catch requests errors (perhaps raise_for_status)
 <br>
 
 ## Contributions
