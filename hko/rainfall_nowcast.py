@@ -19,7 +19,8 @@ def rainfall_nowcast(lat, lng):
     """A function to retrieve rainfall nowcast data from Hong Kong Observatory"""
 
     response = {}
-    if isinstance(lat, float) and isinstance(lng, float):
+    if isinstance(lat, float) and isinstance(lng, float) and\
+       -90 <= lat <= 90 and -180 <= lng <= 180:
         temp_dict = MAPPING
         for i in temp_dict:
             distance = distance_calculation(lat, lng, float(i['lat']), float(i['lng']))

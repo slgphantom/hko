@@ -7,6 +7,7 @@ import requests
 
 from hko.distance_calculation import distance_calculation
 
+
 with open('assets/grid_location.json') as f:
     GRID = json.load(f)
 BASE_URL = 'http://pda.weather.gov.hk/'
@@ -16,7 +17,8 @@ def local_weather(lat, lng):
 
     """A function to retrieve local weather data from Hong Kong Observatory"""
     response = {}
-    if isinstance(lat, float) and isinstance(lng, float):
+    if isinstance(lat, float) and isinstance(lng, float) and\
+       -90 <= lat <= 90 and -180 <= lng <= 180:
         temp_dict = GRID
         for i in temp_dict:
             distance = distance_calculation(lat, lng, float(i['lat']), float(i['lng']))
