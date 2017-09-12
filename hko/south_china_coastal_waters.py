@@ -26,11 +26,10 @@ def south_china_coastal_waters(lang='UC'):
         except IndexError:
             response['result'] = ''
             response['status'] = 2
-        except TypeError:
+        except requests.exceptions.RequestException:
             response['result'] = ''
-            response['status'] = 0
+            response['status'] = 5
     else:
         response['result'] = ''
         response['status'] = 0
     return response
-    

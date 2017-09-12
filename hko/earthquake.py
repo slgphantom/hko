@@ -10,6 +10,7 @@ BASE_URL = 'http://pda.weather.gov.hk/'
 URL_UC = 'locspc/android_data/earthquake/eq_app_uc.xml'
 URL_EN = 'locspc/android_data/earthquake/eq_app_e.xml'
 
+
 def earthquake(lang='UC'):
 
     """A function to retrieve astro data from Hong Kong Observatory"""
@@ -28,9 +29,9 @@ def earthquake(lang='UC'):
         except IndexError:
             response['result'] = ''
             response['status'] = 2
-        except TypeError:
+        except requests.exceptions.RequestException:
             response['result'] = ''
-            response['status'] = 0
+            response['status'] = 5
     else:
         response['result'] = ''
         response['status'] = 0

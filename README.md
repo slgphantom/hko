@@ -49,6 +49,7 @@ Status | Meaning
 2 | Request Valid, But Server Returns Error
 3 | Requested Location Not Inside Hong Kong
 4 | Requested Data Not Yet Available
+5 | Request Valid, But Fails To Communicate With Server
 <br>
 
 ## Coding Style
@@ -59,7 +60,7 @@ Status | Meaning
 ## TODO
 - unifying the time/date format (perhaps adding a `timestamp` field in returned `dict`)
 - `major_city_forecast()` --> accept `place` as an argument
-- support more functions 
+- support more functions
 <br>
 
 ## Contributions

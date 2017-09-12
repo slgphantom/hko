@@ -1,4 +1,4 @@
-#encoding=utf8
+# encoding=utf8
 
 """A module to retrieve uv index data from Hong Kong Observatory"""
 
@@ -28,9 +28,8 @@ def uv_index(lang='UC'):
             if lang == 'EN':
                 data = requests.get(BASE_URL + URL_EN).content
                 data_1 = data.replace('The maximum UV Index for ', '')\
-                        .replace(' will be about ', ',')\
-                        .replace('. The intensity of UV radiation wll be ', ',')\
-                        [:-1]
+                             .replace(' will be about ', ',')\
+                             .replace('. The intensity of UV radiation wll be ', ',')[:-1]
                 data_2 = data_1.split(',')
                 response['result'] = {}
                 response['result']['date'] = data_2[0]
@@ -44,11 +43,10 @@ def uv_index(lang='UC'):
             else:
                 response['result'] = ''
                 response['status'] = 2
-        except TypeError:
+        except requests.exceptions.RequestException:
             response['result'] = ''
-            response['status'] = 0
+            response['status'] = 5
     else:
         response['result'] = ''
         response['status'] = 0
     return response
-    
