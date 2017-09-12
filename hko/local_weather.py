@@ -28,7 +28,7 @@ def local_weather(lat, lng):
         if newlist[0]['dis'] < 10:
             try:
                 grid = newlist[0]['grid']
-                url = 'locspc/android_data/gridData/0{}_tc.xml'.format(grid)
+                url = 'locspc/android_data/gridData/{}_tc.xml'.format(grid)
                 grid_data = json.loads(requests.get(BASE_URL + url).text)
                 response['status'] = 1
                 response['result'] = grid_data
