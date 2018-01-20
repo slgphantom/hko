@@ -7,6 +7,6 @@ install:
   - pip install coverage
   - pip install coveralls
 script:
-  - coverage run tests/test_hko.py
+  - coverage run --source=hko tests/test_hko.py
 after_success:
   - coveralls
