@@ -16,7 +16,7 @@ def astro():
     response = {}
     try:
         data = requests.get(BASE_URL + URL).content
-        data2 = re.split('[@#]', data)
+        data2 = re.split('[@#]', data.decode('utf-8'))
         temp = {}
         temp['sunrise'] = data2[0]
         temp['sunset'] = data2[1]
