@@ -16,7 +16,7 @@ def tide():
     response = {}
     try:
         data = requests.get(BASE_URL + URL).content
-        data2 = re.split('[@#]', data)
+        data2 = re.split('[@#]', data.decode('utf-8'))
         temp = {}
         temp['low_tide_1'] = {}
         temp['low_tide_2'] = {}

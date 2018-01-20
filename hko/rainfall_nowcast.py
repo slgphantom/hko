@@ -35,7 +35,7 @@ def rainfall_nowcast(lat, lng):
         try:
             url = 'locspc/android_data/rainfallnowcast/{}_{}.xml'.format(float(lat_2), float(lng_2))
             data = requests.get(BASE_URL + url).content
-            data2 = re.split('[@#]', data)
+            data2 = re.split('[@#]', data.decode('utf-8'))
             temp = {}
             temp['0-30'] = {'from_time': data2[0], 'to_time': data2[2], 'value': data2[1]}
             temp['30-60'] = {'from_time': data2[2], 'to_time': data2[4], 'value': data2[3]}

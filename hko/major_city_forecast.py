@@ -28,14 +28,14 @@ def asia(lang='UC'):
     if lang == 'EN':
         data = requests.get(BASE_URL + URL_ASIA_EN)
     data.encoding = 'utf8'
-    data2 = data.text.encode('utf8').split('@')
+    data2 = data.text.split('@')
     for i in data2:
         temp = i.split('#')
         temp_dict = {}
-        temp_dict['place'] = temp[0].decode('utf8')
+        temp_dict['place'] = temp[0]
         temp_dict['mintemp'] = temp[1]
         temp_dict['maxtemp'] = temp[2]
-        temp_dict['status'] = temp[3].decode('utf8')
+        temp_dict['status'] = temp[3]
         temp_dict['photo'] = temp[4]
         response.append(temp_dict)
     return response
@@ -52,14 +52,14 @@ def africa(lang='UC'):
     if lang == 'EN':
         data = requests.get(BASE_URL + URL_AFRICA_EN)
     data.encoding = 'utf8'
-    data2 = data.text.encode('utf8').split('@')
+    data2 = data.text.split('@')
     for i in data2:
         temp = i.split('#')
         temp_dict = {}
-        temp_dict['place'] = temp[0].decode('utf8')
+        temp_dict['place'] = temp[0]
         temp_dict['mintemp'] = temp[1]
         temp_dict['maxtemp'] = temp[2]
-        temp_dict['status'] = temp[3].decode('utf8')
+        temp_dict['status'] = temp[3]
         temp_dict['photo'] = temp[4]
         response.append(temp_dict)
     return response
@@ -76,14 +76,14 @@ def australia_south_pacific(lang='UC'):
     if lang == 'EN':
         data = requests.get(BASE_URL + URL_AUSTRALIASOUTHPACIFIC_EN)
     data.encoding = 'utf8'
-    data2 = data.text.encode('utf8').split('@')
+    data2 = data.text.split('@')
     for i in data2:
         temp = i.split('#')
         temp_dict = {}
-        temp_dict['place'] = temp[0].decode('utf8')
+        temp_dict['place'] = temp[0]
         temp_dict['mintemp'] = temp[1]
         temp_dict['maxtemp'] = temp[2]
-        temp_dict['status'] = temp[3].decode('utf8')
+        temp_dict['status'] = temp[3]
         temp_dict['photo'] = temp[4]
         response.append(temp_dict)
     return response
@@ -100,14 +100,14 @@ def europe(lang='UC'):
     if lang == 'EN':
         data = requests.get(BASE_URL + URL_EUROPE_EN)
     data.encoding = 'utf8'
-    data2 = data.text.encode('utf8').split('@')
+    data2 = data.text.split('@')
     for i in data2:
         temp = i.split('#')
         temp_dict = {}
-        temp_dict['place'] = temp[0].decode('utf8')
+        temp_dict['place'] = temp[0]
         temp_dict['mintemp'] = temp[1]
         temp_dict['maxtemp'] = temp[2]
-        temp_dict['status'] = temp[3].decode('utf8')
+        temp_dict['status'] = temp[3]
         temp_dict['photo'] = temp[4]
         response.append(temp_dict)
     return response
@@ -124,14 +124,14 @@ def north_central_america(lang='UC'):
     if lang == 'EN':
         data = requests.get(BASE_URL + URL_NORTHCENTRALAMERICA_EN)
     data.encoding = 'utf8'
-    data2 = data.text.encode('utf8').split('@')
+    data2 = data.text.split('@')
     for i in data2:
         temp = i.split('#')
         temp_dict = {}
-        temp_dict['place'] = temp[0].decode('utf8')
+        temp_dict['place'] = temp[0]
         temp_dict['mintemp'] = temp[1]
         temp_dict['maxtemp'] = temp[2]
-        temp_dict['status'] = temp[3].decode('utf8')
+        temp_dict['status'] = temp[3]
         temp_dict['photo'] = temp[4]
         response.append(temp_dict)
     return response
@@ -148,14 +148,14 @@ def south_america(lang='UC'):
     if lang == 'EN':
         data = requests.get(BASE_URL + URL_SOUTHAMERICA_EN)
     data.encoding = 'utf8'
-    data2 = data.text.encode('utf8').split('@')
+    data2 = data.text.split('@')
     for i in data2:
         temp = i.split('#')
         temp_dict = {}
-        temp_dict['place'] = temp[0].decode('utf8')
+        temp_dict['place'] = temp[0]
         temp_dict['mintemp'] = temp[1]
         temp_dict['maxtemp'] = temp[2]
-        temp_dict['status'] = temp[3].decode('utf8')
+        temp_dict['status'] = temp[3]
         temp_dict['photo'] = temp[4]
         response.append(temp_dict)
     return response

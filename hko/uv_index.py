@@ -19,14 +19,14 @@ def uv_index(lang='UC'):
         try:
             if lang == 'UC':
                 data = requests.get(BASE_URL + URL_TC).content.decode('utf8')
-                data_1 = data.split('的最高紫外線指數大約是'.decode('utf8'))
+                data_1 = data.split(u'的最高紫外線指數大約是')
                 response['result'] = {}
                 response['result']['date'] = data_1[0]
-                response['result']['max_uv_index'] = data_1[1].split('，強度屬於'.decode('utf8'))[0]
-                response['result']['intensity'] = data_1[1].split('，強度屬於'.decode('utf8'))[1][:-1]
+                response['result']['max_uv_index'] = data_1[1].split(u'，強度屬於')[0]
+                response['result']['intensity'] = data_1[1].split(u'，強度屬於')[1][:-1]
                 response['status'] = 1
             if lang == 'EN':
-                data = requests.get(BASE_URL + URL_EN).content
+                data = requests.get(BASE_URL + URL_EN).content.decode('utf8')
                 data_1 = data.replace('The maximum UV Index for ', '')\
                              .replace(' will be about ', ',')\
                              .replace('. The intensity of UV radiation wll be ', ',')[:-1]
