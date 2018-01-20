@@ -1,6 +1,6 @@
 """A module to calculate distance."""
 
-from LatLon import LatLon
+from LatLon23 import LatLon
 
 
 def distance_calculation(lat1, lng1, lat2, lng2):
