@@ -6,7 +6,7 @@ import unittest
 from requests.exceptions import RequestException
 
 
-def guard(*args, **kwargs):
+def guard(*_, **__):
 
     """A function to replace socket.socket"""
 
