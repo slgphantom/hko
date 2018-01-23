@@ -9,6 +9,6 @@ install:
 script:
   - coverage run --source=hko,tests -m tests.test_hko
   - coverage run --source=hko,tests -m tests.test_hko_without_internet
-  - coverage combine
+  - coverage combine --append
 after_success:
   - coveralls
