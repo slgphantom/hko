@@ -7,8 +7,8 @@ install:
   - pip install coverage
   - pip install coveralls
 script:
-  - coverage run --source=hko,tests -m tests.test_hko -p
-  - coverage run --source=hko,tests -m tests.test_hko_without_internet -p
+  - coverage run --source=hko,tests -p -m tests.test_hko
+  - coverage run --source=hko,tests -p -m tests.test_hko_without_internet
   - coverage combine
 after_success:
   - coveralls
