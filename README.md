@@ -25,6 +25,8 @@ Every function (request) will return a `dict`, whereas `result` and `status` wil
         'status': 1}
 <br>
 
+See the [demo](demo/demo.ipynb) for more examples
+
 ## Functions List
 Functions | Number of Arguments | Type of Argument | Arguments Supported | Default Arguments 
 :---: | :---: | :---: | :---: | :---: 
