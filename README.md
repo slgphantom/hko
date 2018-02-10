@@ -1,6 +1,6 @@
 # HKO
-[![Build Status](https://travis-ci.org/nhho/hko.svg?branch=master)](https://travis-ci.org/nhho/hko)
-[![Coverage Status](https://coveralls.io/repos/github/nhho/hko/badge.svg?branch=master)](https://coveralls.io/github/nhho/hko?branch=master)
+[![Build Status](https://travis-ci.org/slgphantom/hko.svg?branch=master)](https://travis-ci.org/slgphantom/hko)
+[![Coverage Status](https://coveralls.io/repos/github/slgphantom/hko/badge.svg?branch=master)](https://coveralls.io/github/slgphantom/hko?branch=master)
 
 A package to retrieve weather data from the [Hong Kong Observatory](http://www.hko.gov.hk).
 Data (private api endpoints) obtained through capturing the traffic of the HKO app and web, and extracting the apk file etc.
