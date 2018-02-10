@@ -56,5 +56,6 @@ class TestHKO(unittest.TestCase):
         for func in FUNCTIONS_WITHOUT_ARGS:
             self.assertIn(func()['status'], [1, 2, 5])
 
+
 if __name__ == '__main__':
     unittest.main()
