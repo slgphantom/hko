@@ -1,6 +1,7 @@
 """A module to retrieve rainfall nowcast data from Hong Kong Observatory"""
 
 import json
+import pkg_resources
 import re
 from operator import itemgetter
 
@@ -9,7 +10,7 @@ import requests
 from hko.distance_calculation import distance_calculation
 
 
-with open('assets/rainfall_nowcast_mapping.json') as f:
+with open(pkg_resources.resource_filename(__name__, 'assets/rainfall_nowcast_mapping.json')) as f:
     MAPPING = json.load(f)
 BASE_URL = 'http://pda.weather.gov.hk/'
 
