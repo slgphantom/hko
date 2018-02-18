@@ -1,11 +1,7 @@
 """A module to test the HKO package"""
 
-import os
-import sys
 import unittest
 
-here = os.path.abspath(os.path.dirname(__file__))
-sys.path.append(os.path.join(here, '../'))
 from hko import astro, blog, earthquake, local_weather, lunar_date,\
     major_city_forecast, marine_forecast, rainfall_nowcast,\
     regional_weather, serval_days_weather_forecast,\
